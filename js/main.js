@@ -1,4 +1,22 @@
+function Toggler(selector){
+    this.element = document.querySelector(selector);
+};
+
+Toggler.prototype.getElem = function() {
+    return this.element;
+};
+
+Toggler.prototype.show = function() {
+    this.element.style.display = "";
+};
+
+Toggler.prototype.hide = function() {
+    this.element.style.display = "none";
+};
+
+
 var elem = new Toggler("#section");
+
 var button = document.querySelector("#button");
  
 button.addEventListener("click", function() {
